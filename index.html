@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+ 
+  <title>Mi Cumple</title>
+
+  <!--grupo CSS-->
+  <link rel="stylesheet" href="css/huevito.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+        
+        
+
+
+  <!--grupo JavaScript-->
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js/acciones.js" type="text/javascript"></script>
+  <!-- <script src="phonegap.js" type="text/javascript"></script> -->
+  
+
+
+ </head>
+
+ <body>
+  <div data-role="page" id="principal">
+	<div data-role="header">
+        <h1>Días que faltan para la party</h1>
+	</div>
+	<div data-role="content">	
+        <h2 align="left">Bienvenido (a):</h2>
+		<div align="justify">
+        <p> Esta aplicación te ayudara a calcular cuantos días faltan para que sea tu cumpleaños y para saber tu edad, te pedirá algunos datos personales pero no te preocupes estos seran confidenciales...</p>
+        </div>
+        <br>
+        <br>
+        <div align="center">
+        <a  href="#datos" id="btncomenzar" data-transition="pop" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow ui-corner-all ui-btn-inline ">Comenzar</a>	
+        </div>	
+    </div>
+ 
+	<div data-role="footer" data-position="fixed">
+		<h1>@Huevito</h1>
+        <h1>@Mariana</h1>
+	</div>
+</div>
+
+<div data-role="page" id="datos">
+	<div data-role="header">
+        <h1>Dime tu nombre...</h1>
+	</div>
+    
+	<div data-role="content" >
+      <div data-role="controlgroup" data-type="horizontal" align="center">
+        <br>	
+        <input type="text" placeholder="Nombre" id="txtnombre" >
+      </div> 
+      <div align="center">
+        <img src="confi.jpg" width="150" height="150">
+      </div>
+	  <div data-role="controlgroup" data-type="horizontal" align="center">
+         <a  href="#principal" data-transition="pop" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-shadow ui-corner-all ui-btn-inline "> Atras</a>	
+        <a  href="#fechas"  id="btnfecha" data-transition="pop" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow ui-corner-all ui-btn-inline ">Siguiente</a>	
+      </div>		
+    </div>
+    
+	<div data-role="footer" data-position="fixed">
+		<h1>@Huevito</h1>
+        <h1>@Mariana</h1>
+	</div>
+</div>
+
+<div data-role="page" id="fechas">
+	<div data-role="header">
+        <h1>¿Qué día te caíste del cielo?...</h1>
+	</div>
+	
+    <div data-role="content" align="center">
+    <div align="center" data-role="controlgroup" data-type="horizontal" style="padding:40px">
+       <div style="width:100px; float:left; padding:12px" align="center">
+        Dia	
+		<input type="number" name="dia" placeholder="Día" max="31" min="1" id="txtdia">
+      DD
+      </div>
+      <div style="width:100px; float:left; padding:12px" align="center">
+        Mes
+        <input type="number" name="mes" placeholder="Mes" max="12" min="1" id="txtmes">
+       MM
+      </div>
+       <div style="width:100px; float:left; padding:12px" align="center">
+        Año
+        <input type="number" name="year" placeholder="Año" min="1950" id="txtyear">
+        AAAA
+      </div>
+   	  </div>
+  </div>
+    <br>
+   <div data-role="controlgroup" data-type="horizontal" align="center" style="clear:both">
+        <a  href="#datos" data-transition="pop" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-shadow ui-corner-all ui-btn-inline "> Atras</a>	
+        <a  href="#resultado"  id="btnresultado" data-transition="pop" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow ui-corner-all ui-btn-inline " onClick="M()">Calcular</a>	
+    </div>
+    
+	<div data-role="footer" data-position="fixed">
+		<h1>@Huevito</h1>
+        <h1>@Mariana</h1>
+	</div>
+</div>
+
+<div data-role="page" id="resultado" >
+	<div data-role="header">
+        <h1>¡¡¡Adivina!!!</h1>
+	</div>
+	<div data-role="content">
+      
+      
+      <div id="divdias" align="center" class="final">
+      </div>
+ 
+      <div id="divcumple" align="center" class="final"> 
+      </div>
+      
+      
+      <div id="divedad" align="center" class="final">
+      </div>
+      
+      <div id="divfelicidades" align="center" hidden="true" class="final">
+        ¡YA CASI ES TU CUMPLE!
+        <br>
+        <br>
+        <img src="dia-de-cumple-feliz.jpg" width="150" height="150">
+ 
+      </div>
+      
+      <div align="center">
+       <a  href="#principal" id="btninicio" data-transition="pop" class="ui-btn ui-icon-home ui-btn-icon-right ui-shadow ui-corner-all ui-btn-inline " >Inicio</a>
+      </div>       
+    </div>
+ 
+ 
+	<div data-role="footer" data-position="fixed">
+		<h1>@Huevito</h1>
+        <h1>@Mariana</h1>
+	</div>
+</div>
+
+</body>
+
+</html>
